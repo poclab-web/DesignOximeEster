@@ -1,0 +1,9 @@
+{
+    "KFOLD_NUM": 3,
+    "TEST_SIZE": 0.2,
+    "SEED": 42,
+    "SCORING": "neg_mean_squared_error",
+    "METRICS": "rmse",
+    "x_range": [2, 2050],
+    "y_column": "T1"
+}

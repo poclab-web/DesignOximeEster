@@ -1,0 +1,11 @@
+torch
+transformers
+numpy
+pandas==1.5
+rdkit-pypi
+parso
+tqdm
+matplotlib
+chemprop
+meeko
+vina

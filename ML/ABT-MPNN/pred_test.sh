@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python predict.py --test_path data/filter_SMILES.csv --checkpoint_dir log/oxime_and_other_transed/fold_1/model_0 --preds_path data/all_SMILES_test.csv --adjacency_path feature/oxime_and_other/adj.npz --distance_path feature/oxime_and_other/dist.npz --coulomb_path feature/oxime_and_other/clb.npz --features_path feature/oxime_and_other/rdkit.npz --normalize_matrices --no_features_scaling --smiles_col "smiles"

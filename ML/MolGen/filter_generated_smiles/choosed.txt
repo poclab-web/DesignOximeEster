@@ -1,0 +1,5 @@
+CC(=O)O\N=C\c1ccc2c(c1)Sc1cc(/C=N/OC(=O)C)ccc12
+CCCCCN1c2ccc(C#Cc3ccc(C=NOC(C)=O)cc3)cc2Sc2cc(C#Cc3ccc(C=NOC(C)=O)cc3)ccc21
+CC(=O)O/N=C/c1ccc2c(c1)Sc1cc(/C=N/OC(C)=O)ccc1O2
+CCN1c2ccc(-c3ccc(/C=N\OC(=O)c4ccccc4)cc3)cc2Sc2cc(-c3ccc(/C=N\OC(=O)c4ccccc4)cc3)ccc21
+CC(=O)O\N=C\c1ccc2c(c1)Sc1cc(/C=N/OC(C)=O)ccc1N2c1ccc([N+](=O)[O-])cc1

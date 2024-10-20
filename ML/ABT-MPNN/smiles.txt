@@ -1,0 +1,10 @@
+c1cc2c3c(cccc3c1)CC2
+c1cc2ccc3ccc4ccc5cccc6c(c1)c2c3c4c56
+Nc1nc2ccccc2[nH]1
+CN1CCN2c3ccccc3Cc3ccccc3C2C1
+Clc1cccc2ccccc12
+Cc1cc2nc[nH]c2cc1C
+Cc1ccc2ccc3cccc4ccc1c2c34
+CC(CN(C)C)CN1c2ccccc2CCc2ccccc21
+Clc1ccc2c(c1)C(c1ccccc1)=NCc1nncn1-2
+c1ccc2c(CC3=NCCN3)cccc2c1
