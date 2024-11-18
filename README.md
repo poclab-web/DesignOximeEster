@@ -1,6 +1,6 @@
 # Design Oxime Ester
 
-<img src='./docs/asbtract.png' width=900>
+<img src='./docs/asbtract.jpg' width=900>
 
 ## Overview
 
