@@ -59,7 +59,6 @@ class ABTMPNN:
     
 
     def make_graph(self, smiles:list):
-        # exit()
         graph = mol2matrix(smiles, self.args)
         if self.args.coulomb:
             clb = graph.get_coulomb()[1:]
@@ -69,7 +68,6 @@ class ABTMPNN:
         if self.args.distance:
             dist = graph.get_distance()[1:]
             dist = np.array(dist, dtype=object)
-            # print('tmp_dist.shape', tmp_dist.shape)
         else:
             dist = None
         if self.args.adjacency:
@@ -88,16 +86,12 @@ class ABTMPNN:
         return feature_generator
 
     def make_need_data(self, smiles:list):
-        # smiles_convert_with_mol = []
-        # for s in smiles:
-        #     smiles_convert_with_mol.append(self.get_smiles(s))
         clb, dist, adj = self.make_graph(smiles)
         feature_generator = self.make_features(self.args.features_generator)
         return clb, dist, adj, feature_generator
     
 
     def is_able_to_predict(self, smiles:str):
-        # 入力したSmilesが予測可能か判定する
         mol = Chem.MolFromSmiles(smiles)
         smiles = Chem.MolToSmiles(mol, isomericSmiles=True) if type(mol) != str else mol
         
@@ -120,8 +114,6 @@ class ABTMPNN:
 
 
     def preprocess_predict(self, smiles: List[List[str]], num_tasks:int):
-        # update_prediction_args(predict_args=args, train_args=self.args)
-        # args: Union[PredictArgs, TrainArgs]
         clb, dist, adj, feature_generator = self.make_need_data(smiles)
 
         if self.args.atom_descriptors == 'feature':
@@ -206,15 +198,12 @@ def inverse_log_transform(value: float) -> float:
 if __name__ == "__main__":
     import time
     json_path = "./log/oxime_and_other_transed/args.json"
-    # args = Args(json_path)
 
     import pandas as pd
     import sys
     csv_path = sys.argv[1]
     df = pd.read_csv(csv_path)
     all_smiles = df['SMILES'].values.tolist()
-    # print('smiles_list', smiles_list)
-    # smiles_list = [[s] for s in all_smiles]
     
     def split_smiles_to_batches(smiles, batch_size):
         return [smiles[i:i + batch_size] for i in range(0, len(smiles), batch_size)]

@@ -3,10 +3,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-# データフレームを画像として保存する関数
 def df_to_png(csv_path, filename):
     df = pd.read_csv(csv_path)
-    fig, ax = plt.subplots(figsize=(10, 2))  # サイズ調整
+    fig, ax = plt.subplots(figsize=(10, 2))
     ax.axis("tight")
     ax.axis("off")
     table_data = []

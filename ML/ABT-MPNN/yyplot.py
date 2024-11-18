@@ -5,13 +5,10 @@ import numpy as np
 import os
 
 def plot_yy(csv_path,save_dir):
-    # CSVデータの読み込み
     data = pd.read_csv(csv_path)
-
-    # 物性値のリストを取得
     properties = list(set([col.replace('_target', '').replace('_pred', '') for col in data.columns if '_target' in col or '_pred' in col]))
 
-    # yyプロットの作成
+    
     for prop in properties:
         target_col = f'{prop}_target'
         pred_col = f'{prop}_pred'
@@ -36,7 +33,6 @@ def plot_yy(csv_path,save_dir):
 
         save_fig_path = os.path.join(save_dir,f'yy_plot_{prop}.png')
         plt.savefig(save_fig_path)
-        # plt.show()
 
 
 if __name__ == '__main__':

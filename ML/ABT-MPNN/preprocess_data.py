@@ -7,16 +7,9 @@ def log_transform(df: pl.DataFrame, column_name: str) -> pl.DataFrame:
     ])
 
 def reset_oxim_id(df: pl.DataFrame) -> pl.DataFrame:
-    # 'oxim_id'カラムをユニークにし、小さい順にソート
     unique_oxim_ids = df['oxim_id'].unique().sort()
-    
-    # ユニークな値にインデックスをマッピング
     oxim_id_mapping = {oxim_id: index for index, oxim_id in enumerate(unique_oxim_ids)}
-    
-    # 'oxim_id'カラムの値を新しいインデックスで置き換え
     new_oxim_id = df['oxim_id'].map_dict(oxim_id_mapping).alias('oxim_id')
-    
-    # 不要なカラムを削除し、新しいカラムを追加
     return df.drop('oxim_id').with_columns([new_oxim_id])
 
 def remove_duplicate_rows(df: pl.DataFrame, column_names: list) -> pl.DataFrame:
@@ -44,9 +37,5 @@ if __name__ == '__main__':
 
     for column in columns_target:
         df = log_transform(df, column)
-
-    # # Remove duplicate rows
-    # df = remove_duplicate_rows(df, columns)
-    # df = remove_rows_with_null(df, columns)
 
     df.write_csv(csv_path)
