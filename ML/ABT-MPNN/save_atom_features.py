@@ -3,6 +3,7 @@
 import time
 from tap import Tap
 import os
+import numpy as np
 
 from chemprop.atomic_matrices import mol2matrix
 from chemprop.features import save_features
@@ -40,31 +41,27 @@ def generate_matrices(args: Args):
     t = time.time()
 
     if args.coulomb or args.distance or args.adjacency:
-        print("Generating atomic matrices")
         graph = mol2matrix(smiles, args)
         elapsed = time.time() - t
 
         if args.coulomb:
-            print(graph.get_coulomb())
-            elements = graph.get_coulomb()
-            for el in elements:
-                try:
-                    print(el.shape)
-                except:
-                    print(el)
             clb = graph.get_coulomb()[1:]
+            clb = np.array(clb, dtype=object)
+            
             save_features(os.path.join(args.save_dir, "clb.npz"), clb)
-            print("Coulomb matrices saved.")
+            print("Coulomb matrices saved in ", os.path.join(args.save_dir, "clb.npz"))
 
         if args.distance:
             print('distance')
             dist = graph.get_distance()[1:]
+            dist = np.array(dist, dtype=object)
             save_features(os.path.join(args.save_dir, "dist.npz"), dist)
             print("Distance matrices saved.")
 
         if args.adjacency:
             print('adjacency')
             adj = graph.get_adjacency()[1:]
+            adj = np.array(adj, dtype=object)
             save_features(os.path.join(args.save_dir, "adj.npz"), adj)
             print("Adjacency matrices saved.")
 
