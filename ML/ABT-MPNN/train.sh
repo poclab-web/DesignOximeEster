@@ -27,10 +27,14 @@ echo "target column: " $target_columns
 echo "smiles columns: $smiles_columns"
 
 
+# load python path
+PYTHON_PATH=$(jq -r '.python_path' setting.json)
+echo "Your python path: $PYTHON_PATH"
+
 log_path="$log_dir/train.log"
 echo "log file will export to $log_path"
 
-python train.py --save_dir $save_dir \
+$PYTHON_PATH train.py --save_dir $save_dir \
     --data_path $csv_path \
     --target_columns $target_columns \
     --smiles_columns $smiles_columns \

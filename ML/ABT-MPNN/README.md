@@ -58,7 +58,7 @@ bash preprocess_train.sh {csv_path} {save_dir} {smiles_column} {task_name}
 **Example**
 
 ```
-bash preprocess_train.sh "./data/freesolv.csv" "./features/freesolv" "smiles" "freesolv"
+bash preprocess_train.sh "data/oxime_and_other/oxime_and_other.csv" "./features/oxim" "smiles" "oximeester"
 ```
 
 ### 2. Training
@@ -80,7 +80,7 @@ bash train.sh {csv_path} {save_dir} {task} {adjacency_path} {distance_path} {cou
 **Example**
 
 ```
-bash train.sh data/qm9.csv feature/qm9 regression feature/qm9/adj.npz feature/qm9/clb.npz feature/qm9/dist.npz feature/qm9/rdkit.npz homo smiles qm6
+bash train.sh data/oxime_and_other/oxime_and_other.csv feature/oxim regression feature/oxim/adj.npz feature/oxim/clb.npz feature/oxim/dist.npz feature/oxim/rdkit.npz T1 smiles oxim
 ```
 
 Sample data download: https://drive.google.com/file/d/1reNIj65nKHPblIM00_gpbQqmWrmNZc1k/view?usp=drive_link
@@ -94,4 +94,3 @@ bash see_attention.sh {csv_path} {ckpt_dir} {pred_path} {viz_save_dir} {adjacenc
 # Reference
 
 Referenced from [ABT-MPNN: An atom-bond transformer-based message passing neural network for molecular property prediction](https://doi.org/10.1186/s13321-023-00698-9).
-![](https://github.com/LCY02/ABT-MPNN/blob/master/docs/architecture.png?raw=true)

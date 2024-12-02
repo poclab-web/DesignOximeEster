@@ -1,1 +1,0 @@
-python main.py --trg_path /Users/watanabeyuuya/photopolymerization_initiator/assembly/datasets/250k_rndm_zinc_drugs_clean_3.csv --filename zinc_250k_brics --base_smarts "COC(=O)N=C(\*)\*" --method brics
