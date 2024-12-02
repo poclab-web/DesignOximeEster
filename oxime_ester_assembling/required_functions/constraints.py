@@ -24,17 +24,16 @@ class BaseConstraints:
         return self.smarts
     
     def numerical(self):
-        # 数値的な制約 e.g. 分子量
         return self.smarts
         
     
     def filter(self):
-        # フラグメントじゃなかったら返す
+        
         if '*' not in self.smarts:
             logger.warning('{} is not fragment!!'.format(self.smarts))
             return None
 
-        # フラグメント隣接原子のフィルタリング
+        
         if self.fragment_neighbor:
             mol = Chem.MolFromSmarts(self.smarts)
             idxs = getAtomIndex(mol, '*')

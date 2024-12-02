@@ -13,7 +13,7 @@ from required_functions.fragmentgenerator import allocateFragLabel
 logger = logging.getLogger('Molecule Synthesis')
 
 def assembly(filename:str, base_smarts:str, trg_smiles:str, method='recap'):
-    """ 組み立て型の分子設計関数
+    """ 
 
     Args:
         filename: where to save csv
@@ -92,7 +92,7 @@ class MySynthesizer(SynthesizerBase):
                 )
                 generated.append(smi)
         
-        # フラグメントが一つもなかったらNoneを返す
+        
         else:
             return None
         
