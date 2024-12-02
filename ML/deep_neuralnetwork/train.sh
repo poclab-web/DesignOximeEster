@@ -1,8 +1,8 @@
-python_path="/Users/watanabeyuuya/opt/anaconda3/envs/chem/bin/python"
+python_path="path/to/python"
 epoch=1000
 batch_size=128
 log_path="./log/T1"
-df_path="/Users/watanabeyuuya/photopolymerization_initiator/datasets/data/T1_fin.csv"
+df_path="dataset csv path"
 learning_rate=0.01
 y_column="T1"
 normalize=True

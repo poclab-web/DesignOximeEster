@@ -35,10 +35,5 @@ class DenseNetwork(BaseLayer):
         return x
 
     def set_channel(self, pre_ch, mag):
-        """
-        pre_ch -> 一個前の層のチャンネルの出力
-        next_ch -> 次の層のチャンネルの入力
-        基本的に1/magしていく
-        """
         next_ch = pre_ch / mag
         return next_ch

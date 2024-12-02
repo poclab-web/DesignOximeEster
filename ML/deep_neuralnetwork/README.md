@@ -1,0 +1,32 @@
+# Overview
+
+We used Morgan Finger Print as a descriptor to learn the T1, S1, and S1 oscillator intensities of the oxime ester
+
+# training dataset
+
+We use oxime etser dataset
+
+```
+./data/oxime_ester/oxime.csv
+```
+
+# training code
+
+```
+python_path main.py --epoch {epoch} --batch_size {batch_size} --log_path {log_path} --df_path {df_path} --learning_rate {learning_rate} --y_column {y_column} --normalize {normalize} --delete_logs {delete_logs}
+```
+
+for example training T1 energy
+
+```
+python_path="path/to/python"
+epoch=1000
+batch_size=128
+log_path="./log/T1"
+df_path="./data/oxime_ester/oxime.csv"
+learning_rate=0.01
+y_column="T1"
+normalize=True
+delete_logs=True
+$python_path main.py --epoch $epoch --batch_size $batch_size --log_path $log_path --df_path $df_path --learning_rate $learning_rate --y_column $y_column --normalize $normalize --delete_logs $delete_logs
+```
