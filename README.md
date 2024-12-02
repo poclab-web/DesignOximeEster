@@ -8,6 +8,10 @@
 
 Contains the code of oxime ester assebling method
 
+Plese refere the folowing code
+
+./oxime_ester_assembling
+
 ### ML
 
 Containes prediction models and generative model
