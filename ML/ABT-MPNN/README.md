@@ -79,11 +79,11 @@ bash train.sh {csv_path} {save_dir} {task} {adjacency_path} {distance_path} {cou
 
 **Example**
 
+We Trained T1 enery with following code.
+
 ```
 bash train.sh data/oxime_and_other/oxime_and_other.csv feature/oxim regression feature/oxim/adj.npz feature/oxim/clb.npz feature/oxim/dist.npz feature/oxim/rdkit.npz T1 smiles oxim
 ```
-
-Sample data download: https://drive.google.com/file/d/1reNIj65nKHPblIM00_gpbQqmWrmNZc1k/view?usp=drive_link
 
 ### 3. Visualize Results
 

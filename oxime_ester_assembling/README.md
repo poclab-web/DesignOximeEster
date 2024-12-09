@@ -17,7 +17,3 @@ Oxime Ester datasets are prepared in `data/oxime_ester/oxime.smi`
 python python main.py --trg_path ./data/oxime_ester/oxime.smi --filename oxime --base_smarts "COC(=O)N=C(\*)\*" --method brics
 
 ```
-
-```
-
-```

@@ -5,7 +5,6 @@
 *.log
 *.csv
 *.pt
-!data/oxime_and_other/oxime_and_other.csv
 
 
 # Byte-compiled / optimized / DLL files
