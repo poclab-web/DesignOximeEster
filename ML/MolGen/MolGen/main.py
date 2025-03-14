@@ -48,7 +48,6 @@ def main():
     device = torch.device(args.device)
 
     if args.train_predictor:
-        # ここで物性値予測モデルを学習する
         bs1_data = pd.read_csv(args.predictor_dataset_path)
         train, test = train_test_split(bs1_data, test_size=0.2, random_state=42, shuffle=True,)
 

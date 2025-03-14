@@ -385,32 +385,6 @@ class MoleculeDataset(Dataset):
         """
         return len(self._data[0].features) if len(self._data) > 0 and self._data[0].features is not None else None
 
-    # def atom_descriptors_size(self) -> int:
-    #     """
-    #     Returns the size of custom additional atom descriptors vector associated with the molecules.
-    #
-    #     :return: The size of the additional atom descriptor vector.
-    #     """
-    #     return len(self._data[0].atom_descriptors[0]) \
-    #         if len(self._data) > 0 and self._data[0].atom_descriptors is not None else None
-    #
-    # def atom_features_size(self) -> int:
-    #     """
-    #     Returns the size of custom additional atom features vector associated with the molecules.
-    #
-    #     :return: The size of the additional atom feature vector.
-    #     """
-    #     return len(self._data[0].atom_features[0]) \
-    #         if len(self._data) > 0 and self._data[0].atom_features is not None else None
-    #
-    # def bond_features_size(self) -> int:
-    #     """
-    #     Returns the size of custom additional bond features vector associated with the molecules.
-    #
-    #     :return: The size of the additional bond feature vector.
-    #     """
-    #     return len(self._data[0].bond_features[0]) \
-    #         if len(self._data) > 0 and self._data[0].bond_features is not None else None
 
     def normalize_features(self, scaler: StandardScaler = None, replace_nan_token: int = 0,
                            scale_atom_descriptors: bool = False, scale_bond_features: bool = False) -> StandardScaler:
@@ -442,29 +416,11 @@ class MoleculeDataset(Dataset):
             self._scaler = scaler
 
         elif self._scaler is None:
-            # if scale_atom_descriptors and not self._data[0].atom_descriptors is None:
-            #     features = np.vstack([d.raw_atom_descriptors for d in self._data])
-            # elif scale_atom_descriptors and not self._data[0].atom_features is None:
-            #     features = np.vstack([d.raw_atom_features for d in self._data])
-            # elif scale_bond_features:
-            #     features = np.vstack([d.raw_bond_features for d in self._data])
-            # else:
-            # stack all additional features for all molecules
             features = np.vstack([d.raw_features for d in self._data])
             self._scaler = StandardScaler(
                 replace_nan_token=replace_nan_token)  # apply method
             self._scaler.fit(features)
 
-        # if scale_atom_descriptors and not self._data[0].atom_descriptors is None:
-        #     for d in self._data:
-        #         d.set_atom_descriptors(self._scaler.transform(d.raw_atom_descriptors))
-        # elif scale_atom_descriptors and not self._data[0].atom_features is None:
-        #     for d in self._data:
-        #         d.set_atom_features(self._scaler.transform(d.raw_atom_features))
-        # elif scale_bond_features:
-        #     for d in self._data:
-        #         d.set_bond_features(self._scaler.transform(d.raw_bond_features))
-        # else:
         for d in self._data:
             # the normalized features for all molecules
             d.set_features(self._scaler.transform(

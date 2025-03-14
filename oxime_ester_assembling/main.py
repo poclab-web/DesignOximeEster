@@ -21,7 +21,7 @@ def assembly(filename:str, base_smarts:str, trg_smiles:str, method='recap'):
         trg_smiles: 
     
     Returns:
-        generated: list 作成されたSmiles
+        generated: list
     """
 
     # write file
