@@ -69,7 +69,7 @@ Oxime Ester Property Score
 ### Synthetic Routes
 
 F-01
-<img src='./docs/scheme1.png' width=900>
+<img src='./docs/scheme01.png' width=900>
 Schema S2 Synthesis root of F-01
 
 For the first step of the synthesis, the starting 4-methylbenzophenone derivative is dissolved in ethanol, followed by the addition of hydroxylamine hydrochloride (NH2OH•HCl). The reaction mixture is heated to 80°C and maintained at this temperature until the reaction reaches completion. After cooling to room temperature, the intermediate amine product is isolated and purified.
@@ -77,7 +77,7 @@ In the second step, the purified amine intermediate is dissolved in dichlorometh
 Throughout both steps, reaction progress should be carefully monitored using appropriate analytical methods. Standard inert atmosphere techniques may be employed if the reagents are moisture sensitive. Care should be taken during the acyl chloride addition to control the exothermic nature of the reaction.
 
 F-02
-<img src='./docs/scheme2.png' width=900>
+<img src='./docs/scheme02.png' width=900>
 Schema S3 Synthesis root of F-02
 
 The synthesis begins with 2-acetonaphthone dissolved in ethanol. To this solution, hydroxylamine hydrochloride (NH2OH•HCl) is added, and the reaction mixture is heated to 80°C. The reaction is maintained at this temperature until completion, yielding the corresponding oxime intermediate. After cooling to room temperature, the oxime product is isolated and purified.
@@ -85,7 +85,7 @@ For the second step, the purified oxime intermediate is dissolved in dichloromet
 Throughout the synthesis, the reaction progress should be monitored using appropriate analytical techniques. The addition of acetyl chloride should be performed carefully to control the exothermic nature of the reaction.
 
 A-01
-<img src='./docs/scheme3.png' width=900>
+<img src='./docs/scheme03.png' width=900>
 Schema S4 Synthesis root of A-01
 The synthesis begins with phenothiazine, which undergoes an aryl iodide coupling reaction. The phenothiazine is combined with 4-iodotoluene in the presence of copper(I) chloride and potassium carbonate. The reaction mixture is heated to reflux in N-methyl-2-pyrrolidone for the cross-coupling reaction to proceed, yielding the N-arylated phenothiazine intermediate.
 In the second step, the N-arylated phenothiazine intermediate undergoes a Friedel-Crafts acylation. The substrate is treated with hexanoyl chloride under appropriate conditions to introduce two hexanoyl groups at the 3 and 7 positions of the phenothiazine core, producing the diketone intermediate.
@@ -94,7 +94,7 @@ In the final step, both oxime groups are acetylated. The dioxime intermediate is
 Each step requires appropriate workup and purification procedures. The reaction progress should be monitored throughout using suitable analytical methods. Care should be taken during the addition of acetyl chloride in the final step due to the exothermic nature of the reaction.
 
 A-02
-<img src='./docs/scheme4.png' width=900>
+<img src='./docs/scheme04.png' width=900>
 Schema S5 Synthesis root of A-02
 
 The synthesis starts with phenothiazine and 4-iodofluorobenzene. These compounds are combined with copper(I) chloride and potassium carbonate as catalysts, and the reaction mixture is heated at reflux in N-methyl-2-pyrrolidone. This Ullmann-type coupling reaction yields the N-(4-fluorophenyl)phenothiazine intermediate.
@@ -104,7 +104,7 @@ In the final step, both oxime groups are acetylated. The dioxime intermediate is
 Throughout the synthesis, each step requires appropriate workup and purification procedures. Reaction progress should be monitored using suitable analytical methods such as TLC or NMR spectroscopy. Special attention should be paid to maintaining anhydrous conditions during the Friedel-Crafts acylation and controlling the temperature during the addition of reagents.
 
 G-01
-<img src='./docs/scheme5.png' width=900>
+<img src='./docs/scheme05.png' width=900>
 Schema S6 Synthesis root of G-01
 
 The synthesis begins with phenoxathiin as the starting material. In the first step, the phenoxathiin undergoes a Friedel-Crafts acylation reaction. The substrate is dissolved in dichloromethane (DCM), and aluminum chloride is added as a Lewis acid catalyst. Cyclopentylacetyl chloride is then carefully added to the reaction mixture at 0°C. After warming to room temperature, the reaction proceeds to form the diacylated product with acylation occurring at the 2 and 8 positions of the phenoxathiin core, introducing two cyclopentylacetyl groups.
@@ -114,7 +114,7 @@ Throughout each step of the synthesis, appropriate workup and purification proce
 
 
 G-02
-<img src='./docs/scheme6.png' width=900>
+<img src='./docs/scheme06.png' width=900>
 Schema S7 Synthesis root of G-02
 
 The synthesis begins with phenoxazine as the starting material. In the first step, the N-alkylation of phenoxazine is performed using 1-bromohexane. The phenoxazine is dissolved in DMSO, and potassium hydroxide is added as a base. The reaction mixture is heated to 70°C, and 1-bromohexane is added. The reaction is maintained at this temperature until the N-alkylated phenoxazine product is formed.
