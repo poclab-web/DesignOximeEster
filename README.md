@@ -4,6 +4,12 @@
 
 ## Overview
 
+### Supporting Information
+
+For the paper's Supporting Information, please see here.
+
+./docs/SI.docx
+
 ### oxime_ester_asembling
 
 Contains the code of oxime ester assebling method
@@ -23,4 +29,9 @@ Containes prediction models and generative model
   Dense Neuural network
 
 - ./ML/MolGen
+<<<<<<< HEAD
   SMILES base molecule Generative model
+=======
+  SMILES base molecule Generative model
+
+
