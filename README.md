@@ -29,9 +29,6 @@ Containes prediction models and generative model
   Dense Neuural network
 
 - ./ML/MolGen
-<<<<<<< HEAD
-  SMILES base molecule Generative model
-=======
   SMILES base molecule Generative model
 
 
